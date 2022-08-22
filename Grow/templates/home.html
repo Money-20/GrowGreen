@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+<style>
+ #header{
+    font-family: "Comic Sans MS";
+    color: green;
+    alignment: center ;
+    margin: 30px 30px 30px 30px;
+    font-size: 150px;
+  }
+
+
+ </style>
+ {% block header %}
+
+    <h1 id = "header"> <a href= "{%url 'index' %}" style="text-emphasis: None">Grow-Green</a> </h1>
+    {% endblock%}
+
+ {% block content %}
+    <!--<img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201606/rose-pak-ad---1_647_061216100336.jpg?size=1200: -->
+    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/small-garden-ideas-1647378767.jpg?crop=1.00xw:0.753xh;0,0.237xh&resize=980:*">
+
+    {% endblock %}
