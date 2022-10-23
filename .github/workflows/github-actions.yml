@@ -12,4 +12,5 @@ jobs:
         uses: pozil/auto-assign-issue@v1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          self-assign: true
           assignees: "github.event.issue.user.login"
