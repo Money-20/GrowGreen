@@ -11,5 +11,5 @@ jobs:
       - name: 'Auto-assign issue'
         uses: pozil/auto-assign-issue@v1
         with:
-          repo-token: ${{ secrets.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 }}
+          repo-token: ${{ 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 }}
           assignees: "github.event.issue.user.login"
