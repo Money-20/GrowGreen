@@ -10,4 +10,4 @@ jobs:
     steps:
       - uses: wow-actions/auto-assign@v1
         with:
-          GITHUB_TOKEN: ${{ secrets.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 }}
+          GITHUB_TOKEN: ${{ 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 }}
