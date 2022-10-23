@@ -1,13 +1,15 @@
-name: Auto Assign
+name: Issue assignment
+
 on:
   issues:
     types: [opened]
-  pull_request:
-    types: [opened]
+
 jobs:
-  run:
+  auto-assign:
     runs-on: ubuntu-latest
     steps:
-      - uses: wow-actions/auto-assign@v1
+      - name: 'Auto-assign issue'
+        uses: pozil/auto-assign-issue@v1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
+          repo-token: ${{ secrets.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 }}
+          assignees: "github.event.issue.user.login"
