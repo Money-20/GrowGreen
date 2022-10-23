@@ -1,11 +1,8 @@
-
 name: Issue assignment
 
 on:
     issues:
         types: [opened]
-        comment: 
-          - self-assign
 
 jobs:
     auto-assign:
@@ -14,5 +11,6 @@ jobs:
             - name: 'Auto-assign issue'
               uses: pozil/auto-assign-issue@v1
               with:
-                  numOfAssignee: 1 
-                  allowSelfAssign: True
+                  assignees: octocat,cat,dog
+                  numOfAssignee: 2
+                  allowSelfAssign: false
