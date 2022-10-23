@@ -1,19 +1,13 @@
-name : Auto Author Assign
+name: Auto Assign
 on:
   issues:
-    types: [ opened, reopened ]
-  pull_request_target:
-    types: [ opened, reopened ]
-
-permissions:
-  issues: write
-  pull-requests: write
-
+    types: [opened]
+  pull_request:
+    types: [opened]
 jobs:
-  jobs:
-  assign-author:
+  run:
     runs-on: ubuntu-latest
     steps:
-      - uses: toshimaru/auto-author-assign@v1.6.0
+      - uses: wow-actions/auto-assign@v1
         with:
-          repo-token: ${{ secrets.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 }}
+          GITHUB_TOKEN: ${{ secrets.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 }}
